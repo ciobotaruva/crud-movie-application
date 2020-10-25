@@ -155,3 +155,38 @@ input{
 .logout{
     color: #fff;
 }
+
+
+@media only screen and (min-width: 768px){
+    input{
+        width: 30%;
+        position: absolute;
+        top: 15px;
+    }
+
+    .movies__nav{
+        height:40px;
+    }
+
+    .movies__nav__main{
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    ul.open{
+        width: 30%;
+        height: 100vh;
+    }
+
+    .movies__hamburger.close .movies__line:nth-child(1){
+        transform: translateY(5.5px) rotate(45deg);
+    }
+    
+    .movies__hamburger.close .movies__line:nth-child(2){
+        display: none;
+    }
+    
+    .movies__hamburger.close .movies__line:nth-child(3){
+        transform: translateY(-5.5px) rotate(-45deg);
+    }
+}

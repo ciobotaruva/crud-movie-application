@@ -14,7 +14,7 @@ const handleSubmit = document.querySelector('.login__form').addEventListener('su
 //LOGIN
 async function handleLogin(username, password){
     try{
-        const res = await fetch(`${apiUrl}/login`, {
+        const res = await fetch('https://ancient-caverns-16784.herokuapp.com/auth/login', {
             method: 'POST',
             body: `username=${username}&password=${password}`,
             headers: {
@@ -23,7 +23,7 @@ async function handleLogin(username, password){
         });
         const data = await res.json();      
         handleResponse(data);
-        handleLoginErrors(data);
+        handleErrors(data);
     }catch(err){
         console.warn(err);
     };
@@ -42,7 +42,7 @@ function handleResponse(data){
 
 
 //HANDLE LOGIN ERRORS
-function handleLoginErrors(data){
+function handleErrors(data){
     const usernameError = document.querySelector('.username__error');
     const passwordError = document.querySelector('.password_error');
 
@@ -54,15 +54,15 @@ function handleLoginErrors(data){
     }
 }
 
-document.querySelector('form').addEventListener('keyup', handleLoginErrors);
+document.querySelector('form').addEventListener('change', handleLoginErrors);
 
 //Initial button state is disabled
 const button = document.querySelector('button');
 button.disabled = true;
 
 //Form validation
-function handleLoginErrors(e){
-    e.preventDefault();
+function handleLoginErrors(){
+   
     const fields = document.querySelectorAll('input');
     const usernameError = document.querySelector('.username__error');
     const passwordError = document.querySelector('.password_error');
@@ -78,6 +78,5 @@ function handleLoginErrors(e){
             usernameError.innerHTML = '';
             passwordError.innerHTML = '';
         });
-
     }
 }
