@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Movie</title>
+    <link rel="stylesheet" href="style/add.movie.css">
+    <script src="scripts/add.movie.js" defer></script>
+</head>
+
+<body>
+    <form action="submit" class="movie__add">
+        <h1>Add Movie</h1>
+        <div>
+            <input type="text" id="title" placeholder="Title">
+            <span class="title__error"></span>
+        </div>
+        <div>
+            <input type="text" id="runtime" placeholder="Runtime(E.g. 1h 40min)">
+            <span class="runtime__error"></span>
+        </div>
+        <div>
+            <input type="text" id="genre" placeholder="Genre">
+            <span class="genre__error"></span>
+        </div>
+        <div>
+            <input type="text" id="langauge" placeholder="Language">
+            <span class="language__error"></span>
+        </div>
+        <div>
+            <input type="text" id="poster" placeholder="Poster link">
+            <span class="poster__error general__error "></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

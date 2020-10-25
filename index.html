@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Movie Application</title>
+    <link rel="stylesheet" href="/style/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/login.js" defer></script>
+    <script src='scripts/toggle.buttons.js' defer></script>
+
+</head>
+
+<body>
+    <nav class="movies__nav">
+        <div class="movies__nav__main">
+            <h1>Crud movie Application</h1>
+            <div onclick="openMenu()" class="movies__hamburger">
+                <div class="movies__line"></div>
+                <div class="movies__line"></div>
+                <div class="movies__line"></div>
+            </div>
+        </div>
+        <input type="text" id="search" placeholder="Search...">
+        <ul>
+            <li class="login"><a href="login.html">Login</a></li>
+            <li class="logout">Logout</li>
+            <li class="register"><a href="register.html">Register</a></li>
+            <li class="add__movie"><a href="add.movie.html">Add Movie</a></li>
+            <li><a href="about.project.html">About Project</a></li>
+        </ul>
+    </nav>
+    <section class="movies"></section>
+</body>
+
+</html>
