@@ -35,7 +35,7 @@ function handleResponse(data){
         const token = data.accessToken;
         localStorage.setItem('accessToken', token);
         setTimeout(()=>{
-            window.location='http://127.0.0.1:5500/index.html';
+            window.location='https://ciobotaruva.github.io/crud-movie-application.github.io/';
         }, 3000);
     };
 };
